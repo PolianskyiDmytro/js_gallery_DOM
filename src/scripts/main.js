@@ -4,11 +4,11 @@ const thumbs = document.querySelector('#thumbs');
 const largeImg = document.querySelector('#largeImg');
 
 thumbs.addEventListener('click', (e) => {
-  e.preventDefault();
-
   const a = e.target.closest('a');
 
-  if (!a) {
+  if (a) {
+    e.preventDefault();
+  } else {
     return;
   }
 
